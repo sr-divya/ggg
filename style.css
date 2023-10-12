@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-1:#161b22;
+    --color-2:white;
+    --font-1:'Jost', sans-serif;
+    --color-3:#1158c7;
+    --color-4:#1d2128;
+    --color-5:#30363d;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-1);
+}
+a{
+    text-decoration: none;
+}
+
+#navbar{
+    background-color: var(--color-3);
+    color: var(--color-2);
+    padding: 10px 30px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+#navbar  a{
+    color:  var(--color-2);
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+/* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+font-family: var(--font-1);
+}
+
+#navbar  a::selection{
+    user-select: none;
+}
+#navbar  a::first-letter{
+    font-size: 30px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+transition: 2s ease-out;
+align-items: center;
+
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+nav ul li{
+list-style: none;
+font-size: 20px;
+transition: .2s ease-out;
+cursor: pointer;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav ul li:hover{
+    color: slategray;
+    opacity: .3;
+}
+.hero{
+    padding-top: 60px;
+    min-height: 30vh;
+    width: 100%;
+    background-color: rgb(15, 1, 54);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+.w-1-2{
+            width: 50%;
+            height: 100%;
+            /* background-color: rgb(255, 3, 45); */
+            padding: 0px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+
+
+.w-2-2{
+    width: 50%;
+    height: 100%;
+    /* background-color: rgb(255, 3, 45); */
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+#port-image{
+    width:80%;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+#heading{
+    color: white;
+    /* font-family: ; */
+    font-family: var(--font-1);
+    font-size: 50px;
+}
+
+
+.btn{
+    padding: 30px 50px;
+    display: flex;
+justify-content: start;
+}
+
+.btn .explore-btn{
+    color: white;
+    background-color: slategray;
+    padding: 12px 20px;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: .3s  all ease-in-out;
+    cursor: pointer;
+    /* word-wrap: normal; */
+    text-wrap: nowrap;
+}
+
+.btn .explore-btn:hover{
+        background-color: white;
+        color: var(--color-1);
+}
+
+.btn .hire-btn{
+    color: var(--color-1);
+    margin: 0px 20px;
+    background-color: white;
+    padding: 12px 20px;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: .3s  all ease-in-out;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+.btn .hire-btn:hover{
+        background-color: var(--color-1);
+        color: white;
+}
+
+.skills{
+    background-color: var(--color-1);
+    min-height: 20vh;
+    padding: 20px 40px;
+}
+
+.text-center{
+    text-align: center;
+    color: white;
+}
+.heading {
+    border-bottom: 1px solid var(--color-3);
+    width: 10%;
+    font-size: 40px;
+    text-wrap: nowrap;
+    /* display: inline-block; Change 'relative' to 'inline-block' */
+    text-align: center;
+    /* line-height: 30px; */
+    margin: auto;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; 
+    position: relative; /* Add 'position: relative;' here */
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-3); /* You can define --color-3 in your CSS variables */
+    border-radius: 50%; /* This creates a circular shape */
+    bottom: -10px; /* Adjusted the position to center vertically */
+    right: -10px; /* Adjusted the position to center horizontally */
+}
+
+@media screen and (max-width:583px){
+    nav{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }   
+    nav ul{
+        justify-content: center;
+    }
+    nav ul li{
+        font-size: 20px;
+        }  
+
+        #navbar  a{
+            text-align: center;
+        }
+        .hero{
+            padding-top: 85px;
+        }
+}
+
+@media screen and (max-width:969px) {
+    
+    .w-1-2{
+        display: none;
+    }
+    .w-2-2{
+        width: 100%;
+        justify-content: center;
+    }
+    .heading {
+        border-bottom: 1px solid var(--color-3);
+        width: 50%;
+    }
+    
+#heading{
+    color: white;
+    /* font-family: ; */
+    font-family: var(--font-1);
+    font-size: 30px;
+}
+#heading>span{
+    font-size: 40px;
+    font-weight: bold;
+    display: block;
+    text-wrap: nowrap;
+}
+
+#heading + p{
+    color: white;
+    /* font-family: ; */
+    font-family: var(--font-1);
+    font-size: 16px;
+}
+
+.hire-btn{
+    font-size: 5px;
+    padding: 6px 10px;
+}
+.explore-btn{
+    padding: 6px 10px;
+
+    font-size: 5px;
+
+}
+
+.btn{
+    justify-content: center;
+}
+}
+
+
+
+
+/* skill section */
+.row{
+    padding: 20px 0px;
+    aspect-ratio: 5/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.p-4{
+    padding: 16px;
+}
+.w-1-5{
+        width: 20%;
+        color: white;
+}
+.row :nth-child(1) img{
+    width: 100%;
+}
+.row :nth-child(2) img{
+    width: 100%;
+}
+.row :nth-child(3) img{
+    width: 100%;
+}
+.row :nth-child(4) img{
+    width: 100%;
+}
+.row :nth-child(5) img{
+    width: 100%;
+}
+
+@media screen and (max-width:706px) {
+    .w-1-5{
+        width: 40%;
+        color: white;
+}
+}
+
+/* About section */
+
+.About{
+    background-color: var(--color-4);
+    padding: 10px 0px;
+}
+.class-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.About .w-half{
+    width: 50%;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.About .w-half img{
+    width: 70%;
+}
+
+.About .w-half p{
+   color: white;
+}
+
+.btn-about{
+    padding-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.btn-about .contact{
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 2px 5px #161b22;
+    cursor: pointer;
+    transition: .3s all ease-out;
+}
+
+.btn-about .contact:hover{
+    background-color: var(--color-3);
+    color: white;
+}
+
+
+@media screen and (max-width:700px) {
+    .class-about{
+        flex-direction: column;
+    }
+    .About .w-half{
+        width: 100%;
+    }
+    .About .w-half img{
+        width: 100%;
+    }
+    .About .w-half {
+        text-align: center;
+    }
+    .About .w-half #heading span{
+        font-size: 40px;
+    }
+    .About .w-half .btn-about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+
+
+/* Contact section */
+
+.Contact{
+    background-color: var(--color-5);
+    padding: 10px 0px;
+}
+.class-about{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Contact .w-half{
+    width: 50%;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+
+.Contact .w-half img{
+    width: 70%;
+    border-radius: 5%;
+}
+
+.Contact .w-half p{
+   color: white;
+}
+
+.btn-about{
+    padding-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.btn-about .contact{
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 2px 5px #161b22;
+    cursor: pointer;
+    transition: .3s all ease-out;
+}
+
+.btn-about .contact:hover{
+    background-color: var(--color-3);
+    color: white;
+}
+.Contact .w-half-2{
+    padding: 0px 60px;
+}
+
+.Contact .w-half .mb-3{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6px;
+}
+.Contact .w-half .mb-3 label{
+   
+    color: white;
+    text-align: start;
+}
+.Contact .w-half .mb-3 input{
+   
+    color: var(--color-4);
+    padding: 12px 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 18px;
+}
+.Contact .w-half .mb-3 textarea{
+   
+    color: var(--color-4);
+    padding: 12px 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.Contact .w-half .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Contact .w-half .btn button{
+        padding: 12px 30px;
+        background-color: var(--color-3);
+        outline: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+}
+.Contact .w-half .mb-3 span{
+    color: red;
+}
+.Contact .class-about .w-half iframe{
+    min-height: 450px;
+}
+
+@media screen and (max-width:700px) {
+    .class-about{
+        flex-direction: column;
+    }
+    .Contact .class-about .w-half iframe{
+        min-height: 250px;
+    }
+    .Contact .w-half-2{
+        padding: 30px 20px;
+    }
+    .Contact .w-half{
+        width: 100%;
+    }
+    .Contact .w-half img{
+        width: 100%;
+    }
+    .Contact .w-half {
+        text-align: center;
+    }
+    .Contact .w-half #heading span{
+        font-size: 40px;
+    }
+    .Contact .w-half .btn-about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+
+.alert{
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+  /* font-size: ; */
+   
+}
+
+.success{
+    background-color: #1158c7;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+    transition: .6s all ease-in-out;
+}
+
+
+.danger{
+    background-color: rgb(255, 40, 40);
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+    transition: .6s all ease-in-out;
+}
+
+footer{
+    background-color: var(--color-1);
+    padding: 10px 0px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+
+
+.typing-container {
+    text-align: center;
+}
+
+#typing-text {
+    font-size: 40px;
+    font-weight: bold;
+    /* display: block; */
+    text-wrap: nowrap;
+    font-weight: bold;
+    border-right: 2px solid #333;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40) infinite, erasing 3s steps(40) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes erasing {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}

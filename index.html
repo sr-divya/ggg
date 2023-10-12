@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna | Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+</head>
+<body>
+               <header id="navbar">
+                <nav>
+                    <a href="">Krishna</a>
+                    <ul>
+                        <li>
+                            <a href="#home-page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#skill-page">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#about-page">About</a>
+                        </li>
+                        <li>
+                            <a href="#contact-page">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+               </header>
+               <section id="home-page" class="hero">
+                        <div class="w-2-2">
+                            <h1 id="heading">I am a <span id="typing-text"></span></h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus id dicta, voluptates, qui voluptas totam ducimus explicabo quae molestias rem aut consequatur maiores.</p>
+                            <div class="btn">
+                                <button class="explore-btn">Explore Blog</button>
+                                <a href="#contact-page" class="hire-btn">Hire Me</a>
+                            </div>
+                        </div>
+                        <div class="w-1-2">
+                            <img id="port-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+                        </div>
+               </section>
+               <section id="skill-page" class="skills">
+                       <h1 class="text-center heading">Skills</h1>
+
+                       <div class="row">
+                        <div class="w-1-5 p-4">
+                            <img src="https://nodejs.org/static/images/logo.svg" alt="">
+                        </div>
+                        <div class="w-1-5 p-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" alt="">
+                        </div>
+                        <div class="w-1-5 p-4">
+                            <img src="https://download.logo.wine/logo/Python_(programming_language)/Python_(programming_language)-Logo.wine.png" alt="">
+                        </div>
+                        <div class="w-1-5 p-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" alt="">
+                        </div>
+                        <div class="w-1-5 p-4">
+                            
+                            <img src="https://freepngimg.com/thumb/java/85390-java-language-text-programming-logo-programmer.png" alt="">
+                        </div>
+                       </div>
+               </section>
+               <section id="about-page" class="About">
+                <h1 class="text-center heading">About Us</h1>
+                        <section class="class-about">
+                            <div class="w-half">
+                                <img src="./krishna.png" alt="">
+                            </div>
+                            <div class="w-half">
+                                <h1 id="heading"><span>Krishna Bansal</span></h1>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus id dicta, voluptates, qui voluptas totam ducimus explicabo quae molestias rem aut consequatur maiores.</p>
+                                   
+                                    <div class="btn-about">
+                                        <button onclick="window.location.href='#contact-page'" class="contact">Hire me </button>
+                                    </div>
+                            </div>
+                        </section>
+                 
+               </section>
+               <section id="contact-page" class="Contact">
+                <h1 class="text-center heading">Contact </h1>
+                        <section class="class-about">
+                            <div class="w-half">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113274.61036210156!2d77.6017528698264!3d27.47450240469183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397371163d4d5205%3A0x4273a09defe10ea5!2sMathura%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1695653239137!5m2!1sen!2sin"  style="border:0;"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <form  method="post" onsubmit="submitForm(event)" class="w-half w-half-2">
+                            
+                                <div class="mb-3">
+                                  
+                                        <div class="alert">
+                                            
+                                        </div>
+
+                                </div>
+                                        <div class="mb-3">
+                                            <label for="">Name <span>*</span></label>
+                                            <input id="name" type="text" name="name" placeholder="Enter Your Name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="">Email <span>*</span></label>
+                                            <input id="email" type="text" name="email" placeholder="Enter Your Email Address">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="">Mobile <span>*</span></label>
+                                            <input id="mobile" type="text" name="mobile"  placeholder="Enter Your Mobile Number">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="">Message <span>*</span></label>
+                                            <textarea id="message" name="" placeholder="message..." id="" cols="30"  name="message"  rows="5"></textarea>
+                                        </div>
+                                        <div class="btn">
+                                            <button>Submit</button>
+                                        </div>
+                            </form>
+                        </section>
+                 
+               </section>
+               <footer>
+                <p class="text-center">copyright@krishna <span id="year"></span></p>
+               </footer>
+</body>
+<script src="./main.js"></script>
+</html>
